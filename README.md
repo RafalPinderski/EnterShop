@@ -1,6 +1,6 @@
 # EnterShop
-Własny samodzielny projekt
-Używane narzędzia:
+Własny samodzielny projekt 
+używane narzędzia:
 - Spring Web
 - Spring DevTools
 - Spring Data JPA
