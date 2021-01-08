@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Categorie</title>
+</head>
+<body>
+	<div>
+		<p>Categories</p>
+	</div>
+	<div>
+		<a href="home.html" th:href="@{/}">Strona Główna</a>
+		<a href="product.html" th:href="@{products/all}">Produkty</a>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+			<tr th:each="categories: ${categories}">
+				<td th:text="${categories.category}" />
+				<td th:text="${categories.categoryDescription}" />
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

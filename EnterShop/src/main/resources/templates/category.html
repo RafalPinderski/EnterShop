@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kategoria</title>
+</head>
+<body>
+
+	<div>
+		Kategoria: <b th:text="${category.category}"></b>
+	</div>
+	<div>
+		<a href="home.html" th:href="@{/}">Strona Główna</a>
+		<a href="product.html" th:href="@{/products/all}">Produkty</a>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td th:text="${category.category}" />
+				<td th:text="${category.description}" />
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>
