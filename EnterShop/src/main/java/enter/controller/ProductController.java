@@ -24,7 +24,7 @@ public class ProductController {
 	}
 	@GetMapping("/products/{id}")
 	public String oneProduct(Model model,
-			@PathVariable("id") String product_id) {
+			@PathVariable("id") Integer product_id) {
 		Optional<Product> maybeProduct = productsRepository.findById(product_id);
 		if(maybeProduct.isPresent()) {
 			model.addAttribute("product", maybeProduct.get());

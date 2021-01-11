@@ -9,8 +9,8 @@
 		<p>Produkty</p>
 	</div>
 	<div>
-		<a href="home.html" th:href="@{/}">Strona Główna</a>
-		<a href="product.html" th:href="@{products/all}">Produkty</a>
+		<a th:href="@{/}">Strona Główna</a>
+		<a th:href="@{/products/all}">Produkty</a>
 	</div>
 	<div>
 		<table>
@@ -20,7 +20,7 @@
 			</tr>
 			<tr th:each="products: ${products}">
 				<td th:text="${products.productid}" />
-				<td th:text="${products.name}" />
+				<td><a th:href="@{/products/{id}(id=${products.productid})}" th:text="${products.name}"></a></td>
 				<td th:text="${products.category}" />
 				<td th:text="${products.price}" />
 				<td th:text="${products.description}" />
